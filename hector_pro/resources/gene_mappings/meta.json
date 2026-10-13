@@ -1,0 +1,157 @@
+{
+  "schema_version": 2,
+  "species_order": [
+    "mus_musculus",
+    "homo_sapiens",
+    "macaca_mulatta",
+    "callithrix_jacchus",
+    "pan_troglodytes",
+    "danio_rerio"
+  ],
+  "num_columns": 103641,
+  "n_backbone": 5863,
+  "sources": {
+    "data/gene_vocab_multispecies.csv": "dbe7c063c25848dea9989aeb29f9665ac979c665b6123c3b9b9b504b208db9f4",
+    "data/census_genes_multispecies.csv": "0d20b6f87cbbe1830fd9d64a98bde8380f2303ea1ee1d89ace51d77f35e078f5",
+    "data/gene_inventory/scbasecount_genes.csv": "232fa085f75decf7bfec0bb323d32a42c273e69bc2a40927cba330134f80293f"
+  },
+  "coverage": {
+    "mus_musculus": {
+      "native_genes": 21347,
+      "genes_with_symbols": 21347
+    },
+    "homo_sapiens": {
+      "native_genes": 19272,
+      "genes_with_symbols": 19272
+    },
+    "macaca_mulatta": {
+      "native_genes": 21602,
+      "genes_with_symbols": 17176
+    },
+    "callithrix_jacchus": {
+      "native_genes": 21969,
+      "genes_with_symbols": 16488
+    },
+    "pan_troglodytes": {
+      "native_genes": 23345,
+      "genes_with_symbols": 18750
+    },
+    "danio_rerio": {
+      "native_genes": 25421,
+      "genes_with_symbols": 20117
+    }
+  },
+  "mitochondrial_gene_ids": {
+    "mus_musculus": [
+      "ENSMUSG00000064336",
+      "ENSMUSG00000064337",
+      "ENSMUSG00000064338",
+      "ENSMUSG00000064339",
+      "ENSMUSG00000064340",
+      "ENSMUSG00000064341",
+      "ENSMUSG00000064342",
+      "ENSMUSG00000064343",
+      "ENSMUSG00000064344",
+      "ENSMUSG00000064345",
+      "ENSMUSG00000064346",
+      "ENSMUSG00000064347",
+      "ENSMUSG00000064348",
+      "ENSMUSG00000064349",
+      "ENSMUSG00000064350",
+      "ENSMUSG00000064351",
+      "ENSMUSG00000064352",
+      "ENSMUSG00000064353",
+      "ENSMUSG00000064354",
+      "ENSMUSG00000064355",
+      "ENSMUSG00000064356",
+      "ENSMUSG00000064357",
+      "ENSMUSG00000064358",
+      "ENSMUSG00000064359",
+      "ENSMUSG00000064360",
+      "ENSMUSG00000064361",
+      "ENSMUSG00000064363",
+      "ENSMUSG00000064364",
+      "ENSMUSG00000064365",
+      "ENSMUSG00000064366",
+      "ENSMUSG00000064367",
+      "ENSMUSG00000064368",
+      "ENSMUSG00000064369",
+      "ENSMUSG00000064370",
+      "ENSMUSG00000064371",
+      "ENSMUSG00000064372",
+      "ENSMUSG00000065947"
+    ],
+    "homo_sapiens": [
+      "ENSG00000198695",
+      "ENSG00000198712",
+      "ENSG00000198727",
+      "ENSG00000198763",
+      "ENSG00000198786",
+      "ENSG00000198804",
+      "ENSG00000198840",
+      "ENSG00000198886",
+      "ENSG00000198888",
+      "ENSG00000198899",
+      "ENSG00000198938",
+      "ENSG00000209082",
+      "ENSG00000210049",
+      "ENSG00000210077",
+      "ENSG00000210082",
+      "ENSG00000210100",
+      "ENSG00000210107",
+      "ENSG00000210112",
+      "ENSG00000210117",
+      "ENSG00000210127",
+      "ENSG00000210135",
+      "ENSG00000210140",
+      "ENSG00000210144",
+      "ENSG00000210151",
+      "ENSG00000210154",
+      "ENSG00000210156",
+      "ENSG00000210164",
+      "ENSG00000210174",
+      "ENSG00000210176",
+      "ENSG00000210184",
+      "ENSG00000210191",
+      "ENSG00000210194",
+      "ENSG00000210195",
+      "ENSG00000210196",
+      "ENSG00000211459",
+      "ENSG00000212907",
+      "ENSG00000228253"
+    ],
+    "macaca_mulatta": [],
+    "callithrix_jacchus": [],
+    "pan_troglodytes": [
+      "ENSPTRG00000042626",
+      "ENSPTRG00000042628",
+      "ENSPTRG00000042630",
+      "ENSPTRG00000042631",
+      "ENSPTRG00000042637",
+      "ENSPTRG00000042639",
+      "ENSPTRG00000042641",
+      "ENSPTRG00000042650",
+      "ENSPTRG00000042651",
+      "ENSPTRG00000042653",
+      "ENSPTRG00000042657",
+      "ENSPTRG00000042660",
+      "ENSPTRG00000042661"
+    ],
+    "danio_rerio": [
+      "ENSDARG00000063895",
+      "ENSDARG00000063899",
+      "ENSDARG00000063905",
+      "ENSDARG00000063908",
+      "ENSDARG00000063910",
+      "ENSDARG00000063911",
+      "ENSDARG00000063912",
+      "ENSDARG00000063914",
+      "ENSDARG00000063916",
+      "ENSDARG00000063917",
+      "ENSDARG00000063921",
+      "ENSDARG00000063922",
+      "ENSDARG00000063924"
+    ]
+  },
+  "mitochondrial_reference_note": "IDs with MT- gene symbols in the local annotations. Macaque and marmoset need input mitochondrial/chromosome metadata or explicit mito_gene_ids; their inventories lack mitochondrial gene symbols."
+}

@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hector-pro"
+version = "0.1.0"
+description = "HECTOR Pro — single-cell cell-type annotation and trajectory analysis (inference package)"
+requires-python = ">=3.9"
+
+# Runtime dependencies are intentionally LEFT EMPTY.
+#
+# This package is meant to be evaluated inside an existing conda env (e.g. `sc`)
+# that already has a carefully-built scientific stack (tensorflow / mlx, scanpy,
+# anndata, RAPIDS, ...). Declaring those here would make `pip install -e .` try
+# to resolve and possibly reinstall them, which can clobber conda builds.
+#
+# Instead, install the libraries yourself into the env (see the checklist in the
+# conversation / README). If you would rather have pip manage them, move the
+# lists from [project.optional-dependencies] below into `dependencies` here.
+dependencies = []
+
+[project.optional-dependencies]
+# Light, pip-safe helpers this package needs that conda envs often lack.
+#
+# nvidia-ml-py is what keeps another process's memory out of the batch sizer's
+# budget: cupy reports how much of the card is allocated but not by whom, and
+# without the split a shared card reads as almost entirely free. It is a 53 KB
+# pure-Python binding to the driver, so it belongs here rather than beside the
+# math backends. Its absence is handled -- the sizer falls back to unallocated
+# memory alone -- so this buys correct batch sizes, not the ability to run.
+extras = [
+    "huggingface-hub",
+    "gprofiler-official",
+    "tqdm",
+    "psutil",
+    "pynndescent",
+    "nvidia-ml-py; sys_platform == 'linux'",
+]
+# Apple-Silicon math backend (Mac only — do NOT install on Linux).
+mlx = ["mlx"]
+# Linux / GPU math backend.
+tf = ["tensorflow"]
+
+[tool.setuptools]
+# Only ship the library package; ignore tests/, dev/, examples/, tools/.
+packages = ["hector_pro"]
+
+[tool.setuptools.package-data]
+# Bundled gene vocabulary / mapping tables the model needs at runtime, and the
+# ontology's developmental relations, which a checkpoint does not carry.
+hector_pro = [
+  "resources/gene_mappings/*",
+  "resources/developmental_order/*",
+]
